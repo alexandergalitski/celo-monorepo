@@ -93,7 +93,7 @@ export CELO_TEST_CONFIG=e2e
 cp ../../node_modules/.bin/jest node_modules/.bin/
 
 # Ensure flake tracker is accessible to detox
-cp ../../flakey-test-tracking flakey-test-tracking
+cp -r ../../flakey-test-tracking flakey-test-tracking
 
 # Just to be safe kill any process that listens on the port 'yarn start' is going to use
 echo "Killing previous metro server (if any)"
