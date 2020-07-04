@@ -1,6 +1,6 @@
 const detox = require('detox')
 const config = require('../package.json').detox
-const adapter = require('detox/runners/jest/adapter')
+//const adapter = require('detox/runners/jest/adapter')
 //const specReporter = require('detox/runners/jest/specReporter')
 //const assignReporter = require('detox/runners/jest/assignReporter')
 const { timeout, TimeoutError } = require('./utils')
@@ -9,6 +9,10 @@ const { timeout, TimeoutError } = require('./utils')
 // This takes care of generating status logs on a per-spec basis. By default, jest only reports at file-level.
 // This is strictly optional.
 //jasmine.getEnv().addReporter(specReporter)
+
+// "detox/runners/jest/adapter",
+// "detox/runners/jest/specReporter",
+// "detox/runners/jest/assignReporter"
 
 // This will post which device has assigned to run a suite, which can be useful in a multiple-worker tests run.
 // This is strictly optional.
@@ -59,10 +63,10 @@ beforeAll(
 )
 
 beforeEach(async () => {
-  await adapter.beforeEach()
+  //await adapter.beforeEach()
 })
 
 afterAll(async () => {
-  await adapter.afterAll()
+  //await adapter.afterAll()
   await detox.cleanup()
 })
