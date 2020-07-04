@@ -8,6 +8,7 @@ const flakeTrackingConfig = {
   setupFilesAfterEnv: [require.resolve('./setup.js')],
   testEnvironment: require.resolve('./environment.js'),
   testRunner: 'jest-circus/runner',
+  bail: 3,
 }
 
 const defaultConfig = {
