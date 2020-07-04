@@ -1,18 +1,18 @@
 const detox = require('detox')
 const config = require('../package.json').detox
 const adapter = require('detox/runners/jest/adapter')
-const specReporter = require('detox/runners/jest/specReporter')
-const assignReporter = require('detox/runners/jest/assignReporter')
+//const specReporter = require('detox/runners/jest/specReporter')
+//const assignReporter = require('detox/runners/jest/assignReporter')
 const { timeout, TimeoutError } = require('./utils')
 
-jasmine.getEnv().addReporter(adapter)
+//jasmine.getEnv().addReporter(adapter)
 // This takes care of generating status logs on a per-spec basis. By default, jest only reports at file-level.
 // This is strictly optional.
-jasmine.getEnv().addReporter(specReporter)
+//jasmine.getEnv().addReporter(specReporter)
 
 // This will post which device has assigned to run a suite, which can be useful in a multiple-worker tests run.
 // This is strictly optional.
-jasmine.getEnv().addReporter(assignReporter)
+//jasmine.getEnv().addReporter(assignReporter)
 
 // Increase default jest timeout
 jest.setTimeout(120000)
