@@ -1,5 +1,6 @@
 const flakeTrackingConfig = {
   //globalSetup: require.resolve('./setup.global.js'),
+  bail: 3,
   globals: {
     FLAKES: Map,
     RETRY_TIMES: 10,
@@ -8,7 +9,6 @@ const flakeTrackingConfig = {
   setupFilesAfterEnv: [require.resolve('./setup.js')],
   testEnvironment: require.resolve('./environment.js'),
   testRunner: 'jest-circus/runner',
-  bail: 3,
 }
 
 const defaultConfig = {
