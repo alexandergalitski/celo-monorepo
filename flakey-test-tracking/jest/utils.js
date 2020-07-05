@@ -20,7 +20,7 @@ function formatTestTitles(titles) {
   } else {
     titles.shift()
   }
-  return titles.join(' -> ')
+  return titles.join(' -> ').trim()
 }
 
 const getTestID = (test) => {

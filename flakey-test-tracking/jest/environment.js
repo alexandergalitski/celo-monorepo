@@ -63,6 +63,7 @@ class FlakeTrackingEnvironment extends NodeEnvironment {
       const testID = getTestID(event.test)
       for (const knownFlake of this.skip) {
         if (knownFlake.includes(testID)) {
+          console.log('Skipping Known Flakey Test: ' + testID)
           event.test.mode = 'skip'
           return
         }

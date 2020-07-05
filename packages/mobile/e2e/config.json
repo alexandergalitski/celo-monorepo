@@ -1,4 +1,5 @@
 {
+  "bail": 3,
   "setupFilesAfterEnv": ["./init.js", "../../../flakey-test-tracking/jest/setup.js"],
   "testEnvironment": "../../../flakey-test-tracking/jest/environment.js",
   "reporters": ["detox/runners/jest/streamlineReporter"],
